@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  automaks:
+    image: registry.digitalocean.com/magnus-images/other:automaks-0.2.2
+    container_name: automaks
+    restart: unless-stopped
+    networks:
+      - automaks
+
+networks:
+  automaks:
+    name: automaks
+    driver: bridge

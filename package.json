@@ -1,0 +1,31 @@
+{
+  "name": "automaks",
+  "version": "0.2.2",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "version": "node cicd/deploy/version $npm_package_version",
+    "postversion": "git add . && git commit -m \"docs: bump to $npm_package_version\" && git tag -a $npm_package_version -m \"\""
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "next": "13.5.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-minimal-pie-chart": "^8.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
+    "postcss": "^8",
+    "tailwindcss": "^3",
+    "typescript": "^5"
+  }
+}
